@@ -2,7 +2,7 @@ name: Basic Workflow
 
 on:
     push:
-        branches: feature/basic-workflow
+        branches: [feature/basic-workflow]
 
 jobs:
     do-things:
