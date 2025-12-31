@@ -11,3 +11,8 @@ jobs:
         steps:
             - name: The Thing I've Done
               run: echo "I've done a thing!"
+
+            - name: An Error I made
+              run: |
+                echo "I've made an Error"
+                exit 1
