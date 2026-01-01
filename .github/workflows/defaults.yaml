@@ -3,15 +3,14 @@ name: Using Defaults
 on:
     push:
         branches: [main]
-
+defaults:
+  run:
+    shell: bash
+    working-directory: src
 jobs:
     first-job:
         name: First Job
         runs-on: ubuntu-latest
-        defaults:
-          run:
-            shell: bash
-            working-directory: src
 
         steps:
             - name: Create Source Directory
@@ -25,6 +24,7 @@ jobs:
             - name: Use Bash
               run: echo "I'm running bash also, but elsewhere $(pwd). Booo."
               working-directory: ..
+              
     second-job:
         name: Second Job
         runs-on: ubuntu-latest
