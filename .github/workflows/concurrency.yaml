@@ -1,7 +1,8 @@
 name: Concurrent Workflows
 on:
   push:
-    branches: [branch]
+    branches: [main]
+    
 jobs:
   do-things:
     name: Do Things With Concurrency
