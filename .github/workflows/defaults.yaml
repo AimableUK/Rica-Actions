@@ -1,8 +1,8 @@
 name: Using Defaults
 
 on:
-    push:
-        branches: [main]
+    workflow_dispatch:
+
 defaults:
   run:
     shell: bash
@@ -24,7 +24,7 @@ jobs:
             - name: Use Bash
               run: echo "I'm running bash also, but elsewhere $(pwd). Booo."
               working-directory: ..
-              
+
     second-job:
         name: Second Job
         runs-on: ubuntu-latest

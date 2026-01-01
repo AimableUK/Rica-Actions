@@ -1,7 +1,7 @@
 name: Context Information
+
 on:
-  push:
-    branches-ignore: main
+    workflow_dispatch:
 
 jobs:
   show-context:

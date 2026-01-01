@@ -1,8 +1,7 @@
 name: Basic Workflow
 
 on:
-    push:
-        branches: [feature/basic-workflow]
+    workflow_dispatch:
 
 jobs:
     do-things:
