@@ -24,7 +24,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Create Source Directory
-              run: echo "I'm running bash in $(pwd). So sad."            
+              run: mkdir src
+              shell: bash
+            - name: Use Bash
+              run: echo "I'm running bash in $(pwd). So sad."
               shell: bash
               working-directory: src
-              
