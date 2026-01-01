@@ -2,7 +2,7 @@ name: Matrix Strategy
 on:
   push:
     branches: [main]
-    
+
 jobs:
   do-things:
     name: Do Things In A Matrix - ${{ matrix.os }}, ${{ matrix.node-version }}
@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [10.0.1, 12.1.0, 14.1.0, 15.1.0]
     steps:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
