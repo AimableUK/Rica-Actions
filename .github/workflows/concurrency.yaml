@@ -1,14 +1,15 @@
-name: Concurrent Workflows
+name: Concurrency Group
 on:
   push:
     branches: [main]
-    
 jobs:
   do-things:
     name: Do Things With Concurrency
     runs-on: ubuntu-latest
     concurrency: 
       group: static-group
+      cancel-in-progress: true
     steps:
       - name: The Thing I've Done
         run: echo "I've done a thing!"; sleep 15;
+        
