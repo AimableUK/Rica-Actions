@@ -1,7 +1,6 @@
 name: Matrix Strategy
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   do-things:
