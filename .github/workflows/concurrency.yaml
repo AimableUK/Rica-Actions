@@ -1,7 +1,7 @@
 name: Concurrency Group
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: 
+
 jobs:
   do-things:
     name: Do Things With Concurrency
@@ -12,4 +12,3 @@ jobs:
     steps:
       - name: The Thing I've Done
         run: echo "I've done a thing!"; sleep 15;
-        
